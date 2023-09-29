@@ -1,0 +1,45 @@
+//mixin box shadow
+@mixin shadow($val: 'none') {
+
+    @if $val == 'none' {
+
+        box-shadow: none;
+    } @else if $val == 'default' {
+
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.02);
+        -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.02);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.02);
+    } @else if $val == 'select' {
+       
+        border-color: #7ED321;
+        box-shadow: 0px 6px 8px rgba(126, 211, 33, 0.25);
+        -webkit-box-shadow: 0px 6px 8px rgba(126, 211, 33, 0.25);
+        -moz-box-shadow: 0px 6px 8px rgba(126, 211, 33, 0.25);
+    } @else {
+        
+        box-shadow: $val;
+        -webkit-box-shadow: $val;
+        -moz-box-shadow: $val;
+    }
+}
+
+//mixin reset list
+@mixin reset-list {
+    @apply m-0 p-0 list-none;
+}
+
+//reset links
+@mixin reset-link {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+//mixin gradient
+@mixin bg-gradient($deg, $from, $to) {
+    background: -webkit-linear-gradient($deg, $from, $to);
+    background: -moz-linear-gradient($deg, $from, $to);
+    background: -o-linear-gradient($deg, $from, $to);
+    background: linear-gradient($deg, $from, $to);  
+}

@@ -1,0 +1,64 @@
+
+@use "sass:math";
+@import "./base/variables";
+
+@font-face {
+    font-family: 'sofia_pro_vhbold';
+    src: url('../fonts/sofiapro-boldvh-webfont.woff2') format('woff2'),
+         url('../fonts/sofiapro-boldvh-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'sofia_prosemi_bold';
+    src: url('../fonts/sofiapro-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/sofiapro-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'sofia_problack';
+    src: url('../fonts/sofiapro-black-webfont.woff2') format('woff2'),
+         url('../fonts/sofiapro-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'sofia_proregular';
+    src: url('../fonts/sofiaproregular-webfont.woff2') format('woff2'),
+         url('../fonts/sofiaproregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'icon';
+    src:  url('../fonts/icon.eot?7esj57');
+    src:  url('../fonts/icon.eot?7esj57#iefix') format('embedded-opentype'),
+      url('../fonts/icon.ttf?7esj57') format('truetype'),
+      url('../fonts/icon.woff?7esj57') format('woff'),
+      url('../fonts/icon.svg?7esj57#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+    font-display: swap;
+  }
+
+@import "./tailwind";
+
+@import "./base/base";
+@import "./components/components";
+
+@import "./main";
+@import "./utilities/utilities";

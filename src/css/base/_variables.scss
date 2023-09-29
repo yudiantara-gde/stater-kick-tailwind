@@ -1,0 +1,43 @@
+$shadow: (
+    wide:       0px 10px 40px rgba(0, 0, 0, 0.1),
+    top:        0px 2px 10px rgba(0, 0, 0, 0.1),
+    bottom:     0px -2px 10px rgba(0, 0, 0, 0.1),
+    hover:      0px 2px 20px rgba(0, 0, 0, 0.1)
+);
+
+$container: (
+    md:     48em,
+    lg:     62em,
+    xl:     75em,
+    xxl:    87.5em,
+    xxxl:   100em
+);
+
+$path: (
+    img:    '../img/',
+    icon:   '../img/icon/',
+);
+
+//select 2 
+$remove-color: #888 !default;
+$remove-hover-color: #555 !default;
+$remove-width: 20px !default;
+
+$selection-color: #444 !default;
+$border-color: #aaa !default;
+$border-radius: 4px !default;
+$focus-border-color: #5897fb !default;
+$container-height: 28px !default;
+$selection-bg-top-color: white !default;
+$selection-bg-bottom-color: #eeeeee !default;
+$container-placeholder-color: #999 !default;
+$container-focus-border-color: blue !default;
+$selection-opened-bg-top-color: $selection-bg-bottom-color !default;
+$selection-opened-bg-bottom-color: $selection-bg-top-color !default;
+$dropdown-z-index: 1 !default;
+$dropdown-bg-color: $selection-bg-top-color !default;
+$results-max-height: 200px !default;
+$results-nested-padding: 20px !default;
+$results-choice-bg-hover-color: #3875d7 !default;
+$results-choice-fg-hover-color: white !default;
+$results-choice-fg-unselectable-color: grey !default;

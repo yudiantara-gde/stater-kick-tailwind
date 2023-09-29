@@ -1,0 +1,12 @@
+//no-scroll
+.no-scroll {
+    @apply overflow-hidden;
+  }
+
+//main wrapper
+.main-wrapper {
+    @apply w-[100%] h-[100%] min-h-[100vh] ;
+    @apply pt-[60px];
+}
+
+#__next {@apply overflow-hidden;}

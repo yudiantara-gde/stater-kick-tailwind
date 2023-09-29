@@ -1,0 +1,86 @@
+//set mm menu css in body
+#menu:not( .mm-menu ) {display: none;}
+
+#mm-blocker,
+.mm-blocker {display: none !important;}
+.mm-slideout {
+    -webkit-transform: translate3d(0,0,0) !important;
+    transform: translate3d(0,0,0) !important;
+}
+
+.mm-wrapper.mm-wrapper--opened .mm-page {@apply min-h-[100vh];}
+body.mm-wrapper.mm-wrapper--opened .header {
+
+    .hamburger-mobile {
+
+        .hamburger {
+            @apply opacity-[0] z-[0];
+        }
+
+        .hamburger-close {
+            @apply opacity-[1];
+        }
+    }
+}
+
+.mm-menu {
+  @apply w-[100%] h-[0];
+  @apply top-0 left-0 right-0;
+  @apply overflow-x-hidden overflow-y-scroll;
+  @include vendor('transition', '0.3s ease');
+  @apply z-[2];
+
+    .mm-panels {
+        @apply bg-white h-[auto];
+        @apply border-transparent;
+    }
+
+    .mm-panel {
+        --mm-panel-parent-offset: 0;
+    }
+  
+    .mm-panel .mm-listview {
+
+        li {@apply px-16;}
+
+        li a.mm-listitem__text {
+            @apply py-[24px] px-0;
+            @apply font-sopiaBold font-400 text-[14px] leading-[24px] tracking-[1px] uppercase text-black-default;
+        }
+
+        li a.mm-btn.mm-btn--next {
+            @apply absolute top-[0] left-[1em];
+            @apply w-[calc(100%_-_2em)] h-[100%];
+            @apply p-0 border-l-[0px];
+
+            &:after {@apply hidden w-[0] h-[0];}
+
+            &:before {
+                @apply block w-[100%] h-[100%];
+                @apply py-[24px];
+                @apply font-icon text-[24px] leading-[24px] text-black-default text-right;
+                content: '\E816';
+            }
+        }
+
+        li:after {
+            inset-inline-start: 1em;
+            inset-inline-end: 1em;
+            @apply border-grey-300;
+        }
+    }
+
+    .mm-panel::after {@apply hidden;}
+
+    #mm-1.mm-panel {
+
+        .mm-navbar {
+            @apply hidden;
+        }
+    }
+}
+
+.mm-menu--opened {
+    @apply top-[60px] h-[calc(100%_-_60px)];
+    @apply flex-nowrap;
+}
